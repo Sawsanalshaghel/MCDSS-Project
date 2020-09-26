@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="gb2312" ?> 
+<mapping>
+	<ICaseRetrievalMethod>
+		<impl>DefaultCaseRetrievalMethod</impl>
+	</ICaseRetrievalMethod>
+	<ICaseReuseMethod>
+		<impl>DefaultCaseReuseMethod</impl>
+	</ICaseReuseMethod>
+	<ICaseReviseMethod>
+		<impl>DefaultCaseReviseMethod</impl>
+	</ICaseReviseMethod>
+	<ISimilarity>	
+		<impl>EuclideanSimilarity</impl>
+		<impl>NeighborSimilarity</impl>
+	</ISimilarity>
+	<ICaseReuseStrategy>
+		<impl>MaxCaseReuseStrategy</impl>
+		<impl>MeanCaseReuseStrategy</impl>
+	</ICaseReuseStrategy>
+	<ICaseBase>
+		<impl>DefaultCaseBase</impl>
+	</ICaseBase>
+	<ICaseRestoreMethod>
+		<impl>DefaultCaseRestoreMethod</impl>
+	</ICaseRestoreMethod>
+	<ICaseBaseInput>
+		<impl>DefaultCaseBaseInput</impl>
+	</ICaseBaseInput>
+</mapping>

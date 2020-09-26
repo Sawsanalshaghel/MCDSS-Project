@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<opencbr-config>
+	<mapping>
+		<method interface="ICaseRetrievalMethod" impl="DefaultCaseRetrievalMethod" />
+		<method interface="ICaseReuseMethod" impl="DefaultCaseReuseMethod" />
+		<method interface="ICaseReviseMethod" impl="DefaultCaseReviseMethod" />
+		<method interface="ISimilarity" impl="EuclideanSimilarity" />
+		<method interface="ICaseReuseStrategy" impl="MaxCaseReuseStrategy" />
+		<method interface="ICaseBase" impl="DefaultCaseBase" />
+		<method interface="ICaseRestoreMethod" impl="DefaultCaseRestoreMethod" />
+		<method interface="ICaseBaseInput" impl="DefaultCaseBaseInput" />
+	</mapping>
+	<parameters>
+		<parameter name="CaseBaseInputType" value="2" />
+		<parameter name="SimilarityThrehold" value="0.9" />
+		<parameter name="CaseBaseURL" value= "E:\D Drive\_SAWSAN MASTER\MobileApplication\Fahp_cbr_app\Fahp_cbr_app\CBR\iris-casebase.ocbr"/>
+	</parameters>
+</opencbr-config>
