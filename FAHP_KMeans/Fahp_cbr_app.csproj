@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BD3C93F-906C-426F-AB83-73BA0883A9D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fahp_cbr_app</RootNamespace>
+    <AssemblyName>Fahp_cbr_app</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AHP">
+      <HintPath>..\..\..\Codes\ahp\ahp\AHP\bin\Debug\AHP.dll</HintPath>
+    </Reference>
+    <Reference Include="GeneralMatrix">
+      <HintPath>..\..\..\Codes\ahp\ahp\AHP\bin\Debug\GeneralMatrix.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:\Users\Sawsan\Desktop\WebSite2\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="org.opencbr.core">
+      <HintPath>C:\Users\Sawsan\Desktop\WebSite2\bin\org.opencbr.core.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BestChoice.cs" />
+    <Compile Include="CBR\AccessDatabase.cs" />
+    <Compile Include="CBR\Case.cs" />
+    <Compile Include="CBR\CaseBaseInputType.cs" />
+    <Compile Include="CBR\CaseFactory.cs" />
+    <Compile Include="CBR\CasePhaseFactory.cs" />
+    <Compile Include="CBR\CaseType.cs" />
+    <Compile Include="CBR\CBRContextFactory.cs" />
+    <Compile Include="CBR\CBRContextManager.cs" />
+    <Compile Include="CBR\ConfigInfo.cs" />
+    <Compile Include="CBR\ContextException.cs" />
+    <Compile Include="CBR\DatabaseFactory.cs" />
+    <Compile Include="CBR\DataSource.cs" />
+    <Compile Include="CBR\DbFactory.cs" />
+    <Compile Include="CBR\DbType.cs" />
+    <Compile Include="CBR\DefaultCaseBase.cs" />
+    <Compile Include="CBR\DefaultCaseBaseInput.cs" />
+    <Compile Include="CBR\DefaultCaseRestore.cs" />
+    <Compile Include="CBR\DefaultCaseRestoreMethod.cs" />
+    <Compile Include="CBR\DefaultCaseRetrieval.cs" />
+    <Compile Include="CBR\DefaultCaseRetrievalMethod.cs" />
+    <Compile Include="CBR\DefaultCaseReuse.cs" />
+    <Compile Include="CBR\DefaultCaseReuseMethod.cs" />
+    <Compile Include="CBR\DefaultCaseRevise.cs" />
+    <Compile Include="CBR\DefaultCaseReviseMethod.cs" />
+    <Compile Include="CBR\DefaultCBRContext.cs" />
+    <Compile Include="CBR\DefaultDb.cs" />
+    <Compile Include="CBR\DefaultEngine.cs" />
+    <Compile Include="CBR\DefaultOCBRFile.cs" />
+    <Compile Include="CBR\DynamicCreator.cs" />
+    <Compile Include="CBR\EngineFactory.cs" />
+    <Compile Include="CBR\EngineManager.cs" />
+    <Compile Include="CBR\ErrorCode.cs" />
+    <Compile Include="CBR\EuclideanSimilarity.cs" />
+    <Compile Include="CBR\Feature.cs" />
+    <Compile Include="CBR\FeatureList.cs" />
+    <Compile Include="CBR\FeatureType.cs" />
+    <Compile Include="CBR\ICaseBase.cs" />
+    <Compile Include="CBR\ICaseBaseInput.cs" />
+    <Compile Include="CBR\ICaseRestore.cs" />
+    <Compile Include="CBR\ICaseRestoreMethod.cs" />
+    <Compile Include="CBR\ICaseRetrieval.cs" />
+    <Compile Include="CBR\ICaseRetrievalMethod.cs" />
+    <Compile Include="CBR\ICaseReuse.cs" />
+    <Compile Include="CBR\ICaseReuseMethod.cs" />
+    <Compile Include="CBR\ICaseReuseStrategy.cs" />
+    <Compile Include="CBR\ICaseRevise.cs" />
+    <Compile Include="CBR\ICaseReviseMethod.cs" />
+    <Compile Include="CBR\ICBRContext.cs" />
+    <Compile Include="CBR\IDb.cs" />
+    <Compile Include="CBR\IEngine.cs" />
+    <Compile Include="CBR\IEnv.cs" />
+    <Compile Include="CBR\IMethod.cs" />
+    <Compile Include="CBR\IOCBRFile.cs" />
+    <Compile Include="CBR\ISimilarity.cs" />
+    <Compile Include="CBR\IStat.cs" />
+    <Compile Include="CBR\MaxCaseReuseStrategy.cs" />
+    <Compile Include="CBR\MeanCaseReuseStrategy.cs" />
+    <Compile Include="CBR\MethodList.cs" />
+    <Compile Include="CBR\MethodType.cs" />
+    <Compile Include="CBR\MssqlDatabase.cs" />
+    <Compile Include="CBR\MysqlDatabase.cs" />
+    <Compile Include="CBR\NeighborSimilarity.cs" />
+    <Compile Include="CBR\NoSupportTypeException.cs" />
+    <Compile Include="CBR\OCBRFileFactory.cs" />
+    <Compile Include="CBR\OracleDatabase.cs" />
+    <Compile Include="CBR\Stat.cs" />
+    <Compile Include="CBR\StatFactory.cs" />
+    <Compile Include="CBR\Token.cs" />
+    <Compile Include="CBR\TypeHandle.cs" />
+    <Compile Include="CBR\Version.cs" />
+    <Compile Include="CBR\XMLConfigFile.cs" />
+    <Compile Include="Db.cs" />
+    <Compile Include="frm_Alternative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Alternative.Designer.cs">
+      <DependentUpon>frm_Alternative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_del.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_del.Designer.cs">
+      <DependentUpon>frm_del.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_details.Designer.cs">
+      <DependentUpon>frm_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mainform.Designer.cs">
+      <DependentUpon>frm_mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_processing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_processing.Designer.cs">
+      <DependentUpon>frm_processing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_db.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_db.Designer.cs">
+      <DependentUpon>frm_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_results.Designer.cs">
+      <DependentUpon>frm_results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_settings.Designer.cs">
+      <DependentUpon>frm_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_showdatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_showdatabase.Designer.cs">
+      <DependentUpon>frm_showdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AHP.Designer.cs">
+      <DependentUpon>frm_AHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_FuzzyDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_update.Designer.cs">
+      <DependentUpon>frm_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_result_fuzzy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_result_fuzzy.Designer.cs">
+      <DependentUpon>frm_result_fuzzy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuzzyAHP\AHPModel.cs" />
+    <Compile Include="FuzzyAHP\Alternative.cs" />
+    <Compile Include="FuzzyAHP\AlternativeCollection.cs" />
+    <Compile Include="FuzzyAHP\AlternativeNode.cs" />
+    <Compile Include="FuzzyAHP\AlternativeNodeCollection.cs" />
+    <Compile Include="FuzzyAHP\AnalysisResult.cs" />
+    <Compile Include="FuzzyAHP\Constants.cs" />
+    <Compile Include="FuzzyAHP\CriterionNode.cs" />
+    <Compile Include="FuzzyAHP\CriterionNodeCollection.cs" />
+    <Compile Include="FuzzyAHP\MyFuzzyAHP.cs" />
+    <Compile Include="FuzzyAHP\GenerateComparison.cs" />
+    <Compile Include="FuzzyAHP\GoalNode.cs" />
+    <Compile Include="FuzzyAHP\Hierarchy.cs" />
+    <Compile Include="FuzzyAHP\HierarchyProcessor.cs" />
+    <Compile Include="FuzzyAHP\MyAHPModel.cs" />
+    <Compile Include="FuzzyAHP\Node.cs" />
+    <Compile Include="FuzzyAHP\PairwiseComparison.cs" />
+    <Compile Include="FuzzyAHP\PrioritiesSelector.cs" />
+    <Compile Include="FuzzyAHP\RandomExtensions.cs" />
+    <Compile Include="FuzzyAHP\TriangleFuzzyScale.cs" />
+    <Compile Include="FuzzySets\FuzzyNumber.cs" />
+    <Compile Include="FuzzySets\FuzzyRule.cs" />
+    <Compile Include="FuzzySets\FuzzyTerm.cs" />
+    <Compile Include="FuzzySets\FuzzyVariable.cs" />
+    <Compile Include="FuzzySets\GenericFuzzySystem.cs" />
+    <Compile Include="FuzzySets\InferenceMethod.cs" />
+    <Compile Include="FuzzySets\MamdaniFuzzySystem.cs" />
+    <Compile Include="FuzzySets\MembershipFunction.cs" />
+    <Compile Include="FuzzySets\RuleParser.cs" />
+    <Compile Include="FuzzySets\SugenoFuzzySystem.cs" />
+    <Compile Include="FuzzySets\SugenoVariable.cs" />
+    <Compile Include="Fuzzy\FuzzyRule.cs" />
+    <Compile Include="Fuzzy\FuzzyTerm.cs" />
+    <Compile Include="Fuzzy\FuzzyVariable.cs" />
+    <Compile Include="Fuzzy\GenericFuzzySystem.cs" />
+    <Compile Include="Fuzzy\InferenceMethod.cs" />
+    <Compile Include="Fuzzy\MamdaniFuzzySystem.cs" />
+    <Compile Include="Fuzzy\MembershipFunction.cs" />
+    <Compile Include="Fuzzy\RuleParser.cs" />
+    <Compile Include="Fuzzy\SugenoFuzzySystem.cs" />
+    <Compile Include="Fuzzy\SugenoVariable.cs" />
+    <Compile Include="Kmeans Clustering\Cluster.cs" />
+    <Compile Include="Kmeans Clustering\Extension.cs" />
+    <Compile Include="Kmeans Clustering\IKmeans.cs" />
+    <Compile Include="Kmeans Clustering\KmeansPlus.cs" />
+    <Compile Include="Kmeans Clustering\Kmeans.cs" />
+    <Compile Include="Kmeans Clustering\kMeansClustering.cs" />
+    <Compile Include="ProgressUpdatedEventArgs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frm_input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_input.Designer.cs">
+      <DependentUpon>frm_input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs" />
+    <EmbeddedResource Include="frm_Alternative.resx">
+      <DependentUpon>frm_Alternative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_del.resx">
+      <DependentUpon>frm_del.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_details.resx">
+      <DependentUpon>frm_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mainform.resx">
+      <DependentUpon>frm_mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_processing.resx">
+      <DependentUpon>frm_processing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_db.resx">
+      <DependentUpon>frm_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_results.resx">
+      <DependentUpon>frm_results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_settings.resx">
+      <DependentUpon>frm_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_showdatabase.resx">
+      <DependentUpon>frm_showdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AHP.resx">
+      <DependentUpon>frm_AHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_FuzzyDB.resx">
+      <DependentUpon>frm_FuzzyDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_update.resx">
+      <DependentUpon>frm_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_result_fuzzy.resx">
+      <DependentUpon>frm_result_fuzzy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frm_input.resx">
+      <DependentUpon>frm_input.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
