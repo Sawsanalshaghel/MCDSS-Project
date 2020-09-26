@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--sample XML fragment-->
+<book xmlns:bk="urn:samples" genre="novel">
+  <title>The Handmaid's Tale</title>
+  <price>19.95</price>
+  <bk:ISBN>1-861003-78</bk:ISBN>
+  <bk:style>hardcover</bk:style>
+</book>
